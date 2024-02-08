@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="imagegallery">
+      <section>
+        <img src="img1.jpg" class="img" />
+        <img src="img2.jpg" class="img" />
+        <img src="img3.jpg" class="img" />
+        <img src="img4.jpg" class="img" />
+        <img src="img5.jpg" class="img" />
+      </section>
+      <section>
+        <img class="imgbig" src="img1.jpg" />
+      </section>
+    </div>
+    <script>
+      let imgs = document.querySelectorAll('.img')
+      let bigimg = document.querySelector('.imgbig')
+
+      imgs.forEach(img=>{
+        img.addEventListener("click",()=>{
+          bigimg.src = img.src
+        })
+      })
+    </script>
+  </body>
+</html>
